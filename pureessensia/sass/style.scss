@@ -1,0 +1,114 @@
+/******** Partials ********/
+@import 'partials/variables/colors';
+@import 'partials/text';
+@import 'partials/footer';
+@import 'partials/header';
+@import 'partials/layout';
+@import 'partials/button';
+
+body {
+  height: 100vh;
+}
+
+.transition {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  z-index: 101;
+  background-color: $darkbalance;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease-out;
+}
+
+.transition.is-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body {
+  background-image: url('../images/teal-header.jpg');
+  background-size: cover;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 80px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    font-size: 2rem;
+    color: snow;
+  }
+  & .big {
+    font-size: 9rem;
+    margin-top: 30px;
+  }
+  & p {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    color: snow;
+    width: auto;
+    padding: 0 40px;
+  }
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: snow;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease; }
+
+.home--button {
+  background-color: none;
+  border: 1px solid snow;
+  font-weight: normal;
+    &:hover {
+      color: snow;
+      background-color: $darkbalance;
+      border: none;
+      transform: scale(1.5) perspective(1px);
+      transition: 0.3s;
+    }
+}
+
+footer {
+  display: none;
+}
+
+/**********  MOBILE  **********/
+
+@media only screen and (max-width: 700px) {
+
+  
+  .logo img{
+    width: 40vw;
+  }
+  
+  .intro {
+    text-align: center;
+    & h1 {
+      font-size: 1.2rem;
+    }
+    & .big {
+      font-size: 4rem;
+      margin-bottom: 0;
+    }
+  }
+  
+}

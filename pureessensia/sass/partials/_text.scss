@@ -1,0 +1,33 @@
+h1 {
+  color: #434646;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  color: #434646;
+  font-size: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+h3 {
+  color: #434646;
+  font-family: 'Nunito', sans-serif;
+}
+
+p {
+  width: 40vw;
+  font-family: 'roboto', sans-serif;
+  line-height: 1.7;
+  color: $darkgray;
+  margin: 50px 0;
+}
+
+li {
+  font-family: 'roboto', sans-serif;
+  color: $darkgray;
+  line-height: 1.7;
+  padding-bottom: 25px;
+}

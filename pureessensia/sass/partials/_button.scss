@@ -1,0 +1,16 @@
+.button {
+  color: white;
+  font-family: 'montserrat';
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 10px;
+    &:hover{
+      transition: 0.3s;
+    }
+}
+
+

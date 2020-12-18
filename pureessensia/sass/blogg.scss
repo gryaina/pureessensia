@@ -1,0 +1,141 @@
+@import 'partials/variables/colors';
+@import 'partials/text';
+@import 'partials/footer';
+@import 'partials/header';
+@import 'partials/button';
+@import 'partials/layout';
+
+header {
+  background: none;
+}
+
+.logo {
+  display: none;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: snow;
+}
+
+.top {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/teal-header.jpg');
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+h1 {
+  color: snow;
+  font-weight: 200;
+  font-size: 5rem;
+  letter-spacing: 2.00rem;
+  align-self: center;
+  margin-top: 400px;
+}
+
+#main-content {
+  position: relative;
+  top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & h2 {
+    text-align: center;
+  }
+  & figure img {
+    max-width: 80vw;
+    height: 100%;
+  }
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 80vw;
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.line {
+ margin: 20px 0;
+}
+
+.line:before {
+  content: '';
+  background: -webkit-gradient(linear,left top,right top,from(#fff),color-stop(50%,#000),to(#fff));
+  background: -o-linear-gradient(left,#fff 0%,#000 50%,#fff 100%);
+  background: linear-gradient(to right,#fff 0%,#000 50%,#fff 100%);
+  background: -webkit-gradient(linear,left top,right top,from(var(--global-bg,#fff)),color-stop(50%,var(--global-fg,#000)),to(var(--global-bg,#fff)));
+  background: -o-linear-gradient(left,var(--global-bg,#fff) 0%,var(--global-fg,#000) 50%,var(--global-bg,#fff) 100%);
+  background: linear-gradient(to right,var(--global-bg,#fff) 0%,var(--global-fg,#000) 50%,var(--global-bg,#fff) 100%);
+  width: 60%;
+  height: 1px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/**********  MOBILE  **********/
+
+@media only screen and (max-width: 800px) {
+
+  .top {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+ h1 {
+    font-size: 1.4rem;
+    margin-top: 150px;
+    line-height: 3rem;
+    text-align: center;
+    letter-spacing: 1rem;
+    max-width: 90vw;
+  }
+
+  main {
+    background-color: rgb(250, 250, 250);
+    z-index: 0;
+  }
+
+  #main-content {
+    top: 400px;
+  }
+
+  .post {
+    width: 100vw;
+    box-sizing: border-box;
+    & figure img {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      max-width: 100vw;
+      height: 100%;
+    }
+    & p {
+      width: 80vw;
+      margin: 10px 0;
+    }
+  }
+}
